@@ -9,6 +9,7 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
 }
+
 p {
   margin: 12px 0;
 }
@@ -47,20 +48,40 @@ p {
   width: 210mm;
   height: 297mm;
   padding: 10mm;
+  padding-block: 5mm;
   box-sizing: border-box;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("./Dhaka-Bank-Ltd.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90%;
+  opacity: 0.1;
+  transform: rotate(317deg);
+  z-index: -1;
+  overflow: hidden;
 }
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 14px;
 }
 .header img {
-  width: 210px;
+  width: 280px;
   margin-block: 10px;
   margin-bottom: 20px;
 }
 .header .title {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 18px;
   font-weight: bold;
   margin-top: 8px;
@@ -89,7 +110,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .signature-section p {
   border-top: 1px solid black;
